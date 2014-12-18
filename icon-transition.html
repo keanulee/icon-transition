@@ -25,10 +25,16 @@ Example:
 
 In the above example, we have two `<icon-transition>` icons whose transitions are specified in CSS. Hovering over the icon triggers a transition from one shape to the next.
 
+Icons are black be default. To change the color of the icon, use the `.line` selector within the element and set the `background-color`:
+
+    icon-transition::shadow .line {
+      background-color: white;
+    }
+
 @group Polymer Labs Elements
 @element icon-transition
 @homepage github.io
-@contributors Tom Wiltzius, Addy Osmani
+@contributors Tom Wiltzius, Addy Osmani, Keanu Lee
 -->
 
 <link rel="import" href="../polymer/polymer.html">
