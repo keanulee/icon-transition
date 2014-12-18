@@ -1,0 +1,19 @@
+{
+  "name": "icon-transition",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.1",
+    "core-toolbar": "Polymer/core-toolbar#>=0.4.0 <1.0.0",
+    "paper-button": "Polymer/paper-button#>=0.4.0 <1.0.0"
+  },
+  "homepage": "https://github.com/keanulee/icon-transition",
+  "_release": "40a6cbd4ab",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "40a6cbd4ab39f5ee7457c1921c4985a51aa467f1"
+  },
+  "_source": "git://github.com/keanulee/icon-transition.git",
+  "_target": "master",
+  "_originalSource": "keanulee/icon-transition",
+  "_direct": true
+}

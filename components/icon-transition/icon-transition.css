@@ -1,0 +1,313 @@
+/*
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+*/
+:host {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  line-height: 0;
+}
+
+#svg {
+  width: 100%;
+  height: 100%;
+
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  will-change: transform;
+}
+
+.line {
+  margin: auto;
+  width: 8.33%;
+  height: 8.33%;
+  background-color: black;
+
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform: translate(0, 0) scale(0.01);
+  transform: translate(0, 0) scale(0.01);
+  will-change: transform;
+}
+
+.add .line:nth-child(1) {
+  -webkit-transform: translate(0, 0) scale(7, 1);
+  transform: translate(0, 0) scale(7, 1);
+}
+
+.add .line:nth-child(3) {
+  -webkit-transform: translate(0, 0) rotate(90deg) scale(7, 1);
+  transform: translate(0, 0) rotate(90deg) scale(7, 1);
+}
+
+.remove .line:nth-child(1) {
+  -webkit-transform: translate(0, 0) scale(7, 1);
+  transform: translate(0, 0) scale(7, 1);
+}
+
+.clear .line:nth-child(1) {
+  -webkit-transform: translate(0, 0) rotate(-45deg) scale(9, 1);
+  transform: translate(0, 0) rotate(-45deg) scale(9, 1);
+}
+
+.clear .line:nth-child(3) {
+  -webkit-transform: translate(0, 0) rotate(45deg) scale(9, 1);
+  transform: translate(0, 0) rotate(45deg) scale(9, 1);
+}
+
+.check .line:nth-child(1) {
+  -webkit-transform: translate(-250%, 100%) rotate(45deg) scale(4, 1);
+  transform: translate(-250%, 100%) rotate(45deg) scale(4, 1);
+}
+
+.check .line:nth-child(3) {
+  -webkit-transform: translate(150%, 0) rotate(-45deg) scale(8, 1);
+  transform: translate(150%, 0) rotate(-45deg) scale(8, 1);
+}
+
+.check.rotate .line:nth-child(1) {
+  -webkit-transform: translate(-150%, 0) rotate(-45deg) scale(8, 1);
+  transform: translate(-150%, 0) rotate(-45deg) scale(8, 1);
+}
+
+.check.rotate .line:nth-child(3) {
+  -webkit-transform: translate(250%, -100%) rotate(45deg) scale(4, 1);
+  transform: translate(250%, -100%) rotate(45deg) scale(4, 1);
+}
+
+.menu .line:nth-child(1) {
+  -webkit-transform: translate(0, -250%) scale(9, 1);
+  transform: translate(0, -250%) scale(9, 1);
+}
+
+.menu .line:nth-child(2) {
+  -webkit-transform: translate(0, 0) scale(9, 1);
+  transform: translate(0, 0) scale(9, 1);
+}
+
+.menu .line:nth-child(3) {
+  -webkit-transform: translate(0, 250%) scale(9, 1);
+  transform: translate(0, 250%) scale(9, 1);
+}
+
+.more-horiz .line:nth-child(1) {
+  -webkit-transform: translate(-300%, 0) scale(1.5, 1.5);
+  transform: translate(-300%, 0) scale(1.5, 1.5);
+}
+
+.more-horiz .line:nth-child(2) {
+  -webkit-transform: translate(0, 0) scale(1.5, 1.5);
+  transform: translate(0, 0) scale(1.5, 1.5);
+}
+
+.more-horiz .line:nth-child(3) {
+  -webkit-transform: translate(300%, 0) scale(1.5, 1.5);
+  transform: translate(300%, 0) scale(1.5, 1.5);
+}
+
+.more-vert .line:nth-child(1) {
+  -webkit-transform: translate(0, -300%) scale(1.5, 1.5);
+  transform: translate(0, -300%) scale(1.5, 1.5);
+}
+
+.more-vert .line:nth-child(2) {
+  -webkit-transform: translate(0, 0) scale(1.5, 1.5);
+  transform: translate(0, 0) scale(1.5, 1.5);
+}
+
+.more-vert .line:nth-child(3) {
+  -webkit-transform: translate(0, 300%) scale(1.5, 1.5);
+  transform: translate(0, 300%) scale(1.5, 1.5);
+}
+
+.chevron-right .line:nth-child(1) {
+  -webkit-transform: translate(0, -150%) rotate(45deg) scale(5, 1);
+  transform: translate(0, -150%) rotate(45deg) scale(5, 1);
+}
+
+.chevron-right .line:nth-child(3) {
+  -webkit-transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
+  transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
+}
+
+.chevron-right.rotate .line:nth-child(1) {
+  -webkit-transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
+  transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
+}
+
+.chevron-right.rotate .line:nth-child(3) {
+  -webkit-transform: translate(0, 150%) rotate(45deg) scale(5, 1);
+  transform: translate(0, 150%) rotate(45deg) scale(5, 1);
+}
+
+.chevron-left .line:nth-child(1) {
+  -webkit-transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
+  transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
+}
+
+.chevron-left .line:nth-child(3) {
+  -webkit-transform: translate(0, 150%) rotate(45deg) scale(5, 1);
+  transform: translate(0, 150%) rotate(45deg) scale(5, 1);
+}
+
+.chevron-left.rotate .line:nth-child(1) {
+  -webkit-transform: translate(0, -150%) rotate(45deg) scale(5, 1);
+  transform: translate(0, -150%) rotate(45deg) scale(5, 1);
+}
+
+.chevron-left.rotate .line:nth-child(3) {
+  -webkit-transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
+  transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
+}
+
+.expand-less .line:nth-child(1) {
+  -webkit-transform: translate(150%, 0) rotate(45deg) scale(5, 1);
+  transform: translate(150%, 0) rotate(45deg) scale(5, 1);
+}
+
+.expand-less .line:nth-child(3) {
+  -webkit-transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
+  transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
+}
+
+.expand-less.rotate .line:nth-child(1) {
+  -webkit-transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
+  transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
+}
+
+.expand-less.rotate .line:nth-child(3) {
+  -webkit-transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
+  transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
+}
+
+.expand-more .line:nth-child(1) {
+  -webkit-transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
+  transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
+}
+
+.expand-more .line:nth-child(3) {
+  -webkit-transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
+  transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
+}
+
+.expand-more.rotate .line:nth-child(1) {
+  -webkit-transform: translate(150%, 0) rotate(45deg) scale(5, 1);
+  transform: translate(150%, 0) rotate(45deg) scale(5, 1);
+}
+
+.expand-more.rotate .line:nth-child(3) {
+  -webkit-transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
+  transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
+}
+
+.arrow-forward .line:nth-child(1) {
+  -webkit-transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
+  transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
+}
+
+.arrow-forward .line:nth-child(2) {
+  -webkit-transform: translate(0, 0) scale(7, 1);
+  transform: translate(0, 0) scale(7, 1);
+}
+
+.arrow-forward .line:nth-child(3) {
+  -webkit-transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
+  transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
+}
+
+.arrow-forward.rotate .line:nth-child(1) {
+  -webkit-transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
+  transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
+}
+
+.arrow-forward.rotate .line:nth-child(3) {
+  -webkit-transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
+  transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
+}
+
+.arrow-back .line:nth-child(1) {
+  -webkit-transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
+  transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
+}
+
+.arrow-back .line:nth-child(2) {
+  -webkit-transform: translate(0, 0) scale(7, 1);
+  transform: translate(0, 0) scale(7, 1);
+}
+
+.arrow-back .line:nth-child(3) {
+  -webkit-transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
+  transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
+}
+
+.arrow-back.rotate .line:nth-child(1) {
+  -webkit-transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
+  transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
+}
+
+.arrow-back.rotate .line:nth-child(3) {
+  -webkit-transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
+  transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
+}
+
+.filter-list .line:nth-child(1) {
+  -webkit-transform: translate(0, -250%) scale(9, 1);
+  transform: translate(0, -250%) scale(9, 1);
+}
+
+.filter-list .line:nth-child(2) {
+  -webkit-transform: translate(0, 0) scale(6, 1);
+  transform: translate(0, 0) scale(6, 1);
+}
+
+.filter-list .line:nth-child(3) {
+  -webkit-transform: translate(0, 250%) scale(2, 1);
+  transform: translate(0, 250%) scale(2, 1);
+}
+
+.filter-list.rotate .line:nth-child(1) {
+  -webkit-transform: translate(0, -250%) scale(2, 1);
+  transform: translate(0, -250%) scale(2, 1);
+}
+
+.filter-list.rotate .line:nth-child(3) {
+  -webkit-transform: translate(0, 250%) scale(9, 1);
+  transform: translate(0, 250%) scale(9, 1);
+}
+
+.sort .line:nth-child(1) {
+  -webkit-transform: translate(0, -250%) scale(9, 1);
+  transform: translate(0, -250%) scale(9, 1);
+}
+
+.sort .line:nth-child(2) {
+  -webkit-transform: translate(-150%, 0) scale(6, 1);
+  transform: translate(-150%, 0) scale(6, 1);
+}
+
+.sort .line:nth-child(3) {
+  -webkit-transform: translate(-300%, 250%) scale(3, 1);
+  transform: translate(-300%, 250%) scale(3, 1);
+}
+
+.sort.rotate .line:nth-child(1) {
+  -webkit-transform: translate(300%, -250%) scale(3, 1);
+  transform: translate(300%, -250%) scale(3, 1);
+}
+
+.sort.rotate .line:nth-child(2) {
+  -webkit-transform: translate(150%, 0) scale(6, 1);
+  transform: translate(150%, 0) scale(6, 1);
+}
+
+.sort.rotate .line:nth-child(3) {
+  -webkit-transform: translate(0, 250%) scale(9, 1);
+  transform: translate(0, 250%) scale(9, 1);
+}
+
