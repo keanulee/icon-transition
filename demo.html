@@ -44,7 +44,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
 
         #hero::shadow .line {
-          border-color: white;
+          background-color: white;
         }
 
         icon-transition {
@@ -66,6 +66,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         main {
           margin: 20px;
+        }
+
+        .big {
+          width: 96px;
+          height: 96px;
         }
       </style>
       <div>
@@ -95,9 +100,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <icon-transition on-mouseover="{{ pickShape }}" shape="left" ></icon-transition>
           <icon-transition on-mouseover="{{ pickShape }}" shape="up" ></icon-transition>
           <icon-transition on-mouseover="{{ pickShape }}" shape="down" ></icon-transition>
-
           <icon-transition on-mouseover="{{ pickShape }}" shape="right-arrow" ></icon-transition>
           <icon-transition on-mouseover="{{ pickShape }}" shape="left-arrow" ></icon-transition>
+
+          <h2>Larger icons</h2>
+          <icon-transition class="big" shape="plus" ></icon-transition>
+          <icon-transition class="big" shape="cancel" ></icon-transition>
+          <icon-transition class="big" shape="check" ></icon-transition>
+          <icon-transition class="big" shape="menu" ></icon-transition>
+          <icon-transition class="big" shape="more" ></icon-transition>
+          <icon-transition class="big" shape="more-vert" ></icon-transition>
+          <icon-transition class="big" shape="right" ></icon-transition>
+          <icon-transition class="big" shape="left" ></icon-transition>
+          <icon-transition class="big" shape="up" ></icon-transition>
+          <icon-transition class="big" shape="down" ></icon-transition>
+          <icon-transition class="big" shape="right-arrow" ></icon-transition>
+          <icon-transition class="big" shape="left-arrow" ></icon-transition>
 
           <p>A prototype of Material Design <a href="http://www.google.com/design/spec/animation/delightful-details.html#delightful-details-delightful-details">delightful details</a>.</p>
         </main>
