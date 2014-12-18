@@ -35,7 +35,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <body unresolved>
 
-    <polymer-element name="shape-demo" attributes="shape" touch-action="none">
+    <polymer-element name="icon-demo" attributes="icon" touch-action="none">
     <template>
       <style>
         #hero {
@@ -69,14 +69,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
 
         .big {
-          width: 96px;
-          height: 96px;
+          width: 48px;
+          height: 48px;
         }
       </style>
       <div>
 
         <core-toolbar>
-          <icon-transition id="hero" shape="{{ shape }}"></icon-transition>
+          <icon-transition id="hero" icon="{{ icon }}" spin></icon-transition>
           <span flex>Toolbar</span>
           <core-icon-button icon="refresh"></core-icon-button>
           <core-icon-button icon="add"></core-icon-button>
@@ -84,38 +84,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <main>
           <h2>Transition icon on click</h2>
-          <paper-button on-tap="{{triggerTransition}}" data-shape="menu">Switch to menu</paper-button>
-          <paper-button on-tap="{{triggerTransition}}" data-shape="more">Switch to more</paper-button>
-          <paper-button on-tap="{{triggerTransition}}" data-shape="check">Switch to check</paper-button>
-          <paper-button on-tap="{{triggerTransition}}" data-shape="cancel">Switch to cancel</paper-button>
+          <paper-button on-tap="{{triggerTransition}}" data-icon="menu">Switch to menu</paper-button>
+          <paper-button on-tap="{{triggerTransition}}" data-icon="more-horiz">Switch to more-horiz</paper-button>
+          <paper-button on-tap="{{triggerTransition}}" data-icon="check">Switch to check</paper-button>
+          <paper-button on-tap="{{triggerTransition}}" data-icon="clear">Switch to clear</paper-button>
 
           <h2>Transition icon on hover</h2>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="plus" ></icon-transition>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="cancel" ></icon-transition>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="check" ></icon-transition>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="menu" ></icon-transition>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="more" ></icon-transition>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="more-vert" ></icon-transition>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="right" ></icon-transition>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="left" ></icon-transition>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="up" ></icon-transition>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="down" ></icon-transition>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="right-arrow" ></icon-transition>
-          <icon-transition on-mouseover="{{ pickShape }}" shape="left-arrow" ></icon-transition>
-
-          <h2>Larger icons</h2>
-          <icon-transition class="big" shape="plus" ></icon-transition>
-          <icon-transition class="big" shape="cancel" ></icon-transition>
-          <icon-transition class="big" shape="check" ></icon-transition>
-          <icon-transition class="big" shape="menu" ></icon-transition>
-          <icon-transition class="big" shape="more" ></icon-transition>
-          <icon-transition class="big" shape="more-vert" ></icon-transition>
-          <icon-transition class="big" shape="right" ></icon-transition>
-          <icon-transition class="big" shape="left" ></icon-transition>
-          <icon-transition class="big" shape="up" ></icon-transition>
-          <icon-transition class="big" shape="down" ></icon-transition>
-          <icon-transition class="big" shape="right-arrow" ></icon-transition>
-          <icon-transition class="big" shape="left-arrow" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="add" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="remove" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="clear" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="check" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="menu" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="more-horiz" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="more-vert" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="chevron-right" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="chevron-left" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="expand-less" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="expand-more" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="arrow-forward" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="arrow-back" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="filter-list" ></icon-transition>
+          <icon-transition class="big" on-mouseover="{{ pickIcon }}" icon="sort" ></icon-transition>
 
           <p>A prototype of Material Design <a href="http://www.google.com/design/spec/animation/delightful-details.html#delightful-details-delightful-details">delightful details</a>.</p>
         </main>
@@ -123,20 +112,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </div>
     </template>
     <script>
-      Polymer('shape-demo', {
-        shape: 'plus',
-        pickShape: function(e, target, sender) {
-          this.shape = sender.shape;
+      Polymer('icon-demo', {
+        icon: 'add',
+        pickIcon: function(e, target, sender) {
+          this.icon = sender.icon;
         },
         triggerTransition: function(e, target, sender) {
-          var shape = sender.attributes['data-shape'].value;
-          if (!!shape) {
-            this.shape = shape;
+          var icon = sender.attributes['data-icon'].value;
+          if (!!icon) {
+            this.icon = icon;
           }
         }
       });
     </script>
     </polymer-element>
-    <shape-demo id='demo'></shape-demo>
+    <icon-demo id='demo'></icon-demo>
   </body>
 </html>

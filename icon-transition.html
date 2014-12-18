@@ -38,7 +38,7 @@ Icons are black be default. To change the color of the icon, use the `.line` sel
 -->
 
 <link rel="import" href="../polymer/polymer.html">
-<polymer-element name="icon-transition" attributes="shape" assetpath="src/">
+<polymer-element name="icon-transition" attributes="icon spin" assetpath="src/">
     <template>
         <link rel="stylesheet" href="icon-transition.css">
         <div id="svg">
@@ -49,12 +49,28 @@ Icons are black be default. To change the color of the icon, use the `.line` sel
     </template>
     <script>
         Polymer("icon-transition", {
+            /**
+             * The name of the icon to display.
+             *
+             * @attribute icon
+             * @type string
+             */
+            icon: '',
+
+            /**
+             * Use the spinning animation between icons.
+             *
+             * @attribute spin
+             * @type boolean
+             */
+            spin: false,
+
             _rotate: 0,
 
-            shapeChanged: function() {
-              this._rotate += 180;
+            iconChanged: function() {
+              if (this.spin) this._rotate += 180;
 
-              var cl = this.shape;
+              var cl = this.icon;
               if ((this._rotate % 360) == 180) {
                 cl += " rotate";
               }

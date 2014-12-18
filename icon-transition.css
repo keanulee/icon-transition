@@ -37,16 +37,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   -o-transition: -o-transform 0.5s;
   transition: transform 0.5s;
 
-  -webkit-transform: translate(0, 0) scale(0);
-  -moz-transform: translate(0, 0) scale(0);
-  -ms-transform: translate(0, 0) scale(0);
-  -o-transform: translate(0, 0) scale(0);
-  transform: translate(0, 0) scale(0);
+  -webkit-transform: translate(0, 0) scale(0.01);
+  -moz-transform: translate(0, 0) scale(0.01);
+  -ms-transform: translate(0, 0) scale(0.01);
+  -o-transform: translate(0, 0) scale(0.01);
+  transform: translate(0, 0) scale(0.01);
 
   will-change: transform;
 }
 
-.plus .line:nth-child(1) {
+.add .line:nth-child(1) {
   -webkit-transform: translate(0, 0) scale(7, 1);
   -moz-transform: translate(0, 0) scale(7, 1);
   -ms-transform: translate(0, 0) scale(7, 1);
@@ -54,7 +54,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 0) scale(7, 1);
 }
 
-.plus .line:nth-child(3) {
+.add .line:nth-child(3) {
   -webkit-transform: translate(0, 0) rotate(90deg) scale(7, 1);
   -moz-transform: translate(0, 0) rotate(90deg) scale(7, 1);
   -ms-transform: translate(0, 0) rotate(90deg) scale(7, 1);
@@ -62,7 +62,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 0) rotate(90deg) scale(7, 1);
 }
 
-.cancel .line:nth-child(1) {
+.remove .line:nth-child(1) {
+  -webkit-transform: translate(0, 0) scale(7, 1);
+  -moz-transform: translate(0, 0) scale(7, 1);
+  -ms-transform: translate(0, 0) scale(7, 1);
+  -o-transform: translate(0, 0) scale(7, 1);
+  transform: translate(0, 0) scale(7, 1);
+}
+
+.clear .line:nth-child(1) {
   -webkit-transform: translate(0, 0) rotate(-45deg) scale(9, 1);
   -moz-transform: translate(0, 0) rotate(-45deg) scale(9, 1);
   -ms-transform: translate(0, 0) rotate(-45deg) scale(9, 1);
@@ -70,7 +78,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 0) rotate(-45deg) scale(9, 1);
 }
 
-.cancel .line:nth-child(3) {
+.clear .line:nth-child(3) {
   -webkit-transform: translate(0, 0) rotate(45deg) scale(9, 1);
   -moz-transform: translate(0, 0) rotate(45deg) scale(9, 1);
   -ms-transform: translate(0, 0) rotate(45deg) scale(9, 1);
@@ -134,7 +142,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 250%) scale(9, 1);
 }
 
-.more .line:nth-child(1) {
+.more-horiz .line:nth-child(1) {
   -webkit-transform: translate(-300%, 0) scale(1.5, 1.5);
   -moz-transform: translate(-300%, 0) scale(1.5, 1.5);
   -ms-transform: translate(-300%, 0) scale(1.5, 1.5);
@@ -142,7 +150,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(-300%, 0) scale(1.5, 1.5);
 }
 
-.more .line:nth-child(2) {
+.more-horiz .line:nth-child(2) {
   -webkit-transform: translate(0, 0) scale(1.5, 1.5);
   -moz-transform: translate(0, 0) scale(1.5, 1.5);
   -ms-transform: translate(0, 0) scale(1.5, 1.5);
@@ -150,7 +158,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 0) scale(1.5, 1.5);
 }
 
-.more .line:nth-child(3) {
+.more-horiz .line:nth-child(3) {
   -webkit-transform: translate(300%, 0) scale(1.5, 1.5);
   -moz-transform: translate(300%, 0) scale(1.5, 1.5);
   -ms-transform: translate(300%, 0) scale(1.5, 1.5);
@@ -182,7 +190,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 300%) scale(1.5, 1.5);
 }
 
-.right .line:nth-child(1) {
+.chevron-right .line:nth-child(1) {
   -webkit-transform: translate(0, -150%) rotate(45deg) scale(5, 1);
   -moz-transform: translate(0, -150%) rotate(45deg) scale(5, 1);
   -ms-transform: translate(0, -150%) rotate(45deg) scale(5, 1);
@@ -190,7 +198,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, -150%) rotate(45deg) scale(5, 1);
 }
 
-.right .line:nth-child(3) {
+.chevron-right .line:nth-child(3) {
   -webkit-transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
@@ -198,7 +206,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
 }
 
-.right.rotate .line:nth-child(1) {
+.chevron-right.rotate .line:nth-child(1) {
   -webkit-transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
@@ -206,7 +214,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
 }
 
-.right.rotate .line:nth-child(3) {
+.chevron-right.rotate .line:nth-child(3) {
   -webkit-transform: translate(0, 150%) rotate(45deg) scale(5, 1);
   -moz-transform: translate(0, 150%) rotate(45deg) scale(5, 1);
   -ms-transform: translate(0, 150%) rotate(45deg) scale(5, 1);
@@ -214,7 +222,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 150%) rotate(45deg) scale(5, 1);
 }
 
-.left .line:nth-child(1) {
+.chevron-left .line:nth-child(1) {
   -webkit-transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
@@ -222,7 +230,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, -150%) rotate(-45deg) scale(5, 1);
 }
 
-.left .line:nth-child(3) {
+.chevron-left .line:nth-child(3) {
   -webkit-transform: translate(0, 150%) rotate(45deg) scale(5, 1);
   -moz-transform: translate(0, 150%) rotate(45deg) scale(5, 1);
   -ms-transform: translate(0, 150%) rotate(45deg) scale(5, 1);
@@ -230,7 +238,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 150%) rotate(45deg) scale(5, 1);
 }
 
-.left.rotate .line:nth-child(1) {
+.chevron-left.rotate .line:nth-child(1) {
   -webkit-transform: translate(0, -150%) rotate(45deg) scale(5, 1);
   -moz-transform: translate(0, -150%) rotate(45deg) scale(5, 1);
   -ms-transform: translate(0, -150%) rotate(45deg) scale(5, 1);
@@ -238,7 +246,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, -150%) rotate(45deg) scale(5, 1);
 }
 
-.left.rotate .line:nth-child(3) {
+.chevron-left.rotate .line:nth-child(3) {
   -webkit-transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
@@ -246,7 +254,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 150%) rotate(-45deg) scale(5, 1);
 }
 
-.up .line:nth-child(1) {
+.expand-less .line:nth-child(1) {
   -webkit-transform: translate(150%, 0) rotate(45deg) scale(5, 1);
   -moz-transform: translate(150%, 0) rotate(45deg) scale(5, 1);
   -ms-transform: translate(150%, 0) rotate(45deg) scale(5, 1);
@@ -254,7 +262,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(150%, 0) rotate(45deg) scale(5, 1);
 }
 
-.up .line:nth-child(3) {
+.expand-less .line:nth-child(3) {
   -webkit-transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
@@ -262,7 +270,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
 }
 
-.up.rotate .line:nth-child(1) {
+.expand-less.rotate .line:nth-child(1) {
   -webkit-transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
@@ -270,7 +278,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
 }
 
-.up.rotate .line:nth-child(3) {
+.expand-less.rotate .line:nth-child(3) {
   -webkit-transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
   -moz-transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
   -ms-transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
@@ -278,7 +286,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
 }
 
-.down .line:nth-child(1) {
+.expand-more .line:nth-child(1) {
   -webkit-transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
@@ -286,7 +294,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(150%, 0) rotate(-45deg) scale(5, 1);
 }
 
-.down .line:nth-child(3) {
+.expand-more .line:nth-child(3) {
   -webkit-transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
   -moz-transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
   -ms-transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
@@ -294,7 +302,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(-150%, 0) rotate(45deg) scale(5, 1);
 }
 
-.down.rotate .line:nth-child(1) {
+.expand-more.rotate .line:nth-child(1) {
   -webkit-transform: translate(150%, 0) rotate(45deg) scale(5, 1);
   -moz-transform: translate(150%, 0) rotate(45deg) scale(5, 1);
   -ms-transform: translate(150%, 0) rotate(45deg) scale(5, 1);
@@ -302,7 +310,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(150%, 0) rotate(45deg) scale(5, 1);
 }
 
-.down.rotate .line:nth-child(3) {
+.expand-more.rotate .line:nth-child(3) {
   -webkit-transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
@@ -310,7 +318,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(-150%, 0) rotate(-45deg) scale(5, 1);
 }
 
-.right-arrow .line:nth-child(1) {
+.arrow-forward .line:nth-child(1) {
   -webkit-transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
   -moz-transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
   -ms-transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
@@ -318,7 +326,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
 }
 
-.right-arrow .line:nth-child(2) {
+.arrow-forward .line:nth-child(2) {
   -webkit-transform: translate(0, 0) scale(7, 1);
   -moz-transform: translate(0, 0) scale(7, 1);
   -ms-transform: translate(0, 0) scale(7, 1);
@@ -326,7 +334,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 0) scale(7, 1);
 }
 
-.right-arrow .line:nth-child(3) {
+.arrow-forward .line:nth-child(3) {
   -webkit-transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
@@ -334,7 +342,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
 }
 
-.right-arrow.rotate .line:nth-child(1) {
+.arrow-forward.rotate .line:nth-child(1) {
   -webkit-transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
@@ -342,7 +350,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
 }
 
-.right-arrow.rotate .line:nth-child(3) {
+.arrow-forward.rotate .line:nth-child(3) {
   -webkit-transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
   -moz-transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
   -ms-transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
@@ -350,7 +358,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
 }
 
-.left-arrow .line:nth-child(1) {
+.arrow-back .line:nth-child(1) {
   -webkit-transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
@@ -358,7 +366,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(-200%, -150%) rotate(-45deg) scale(5, 1);
 }
 
-.left-arrow .line:nth-child(2) {
+.arrow-back .line:nth-child(2) {
   -webkit-transform: translate(0, 0) scale(7, 1);
   -moz-transform: translate(0, 0) scale(7, 1);
   -ms-transform: translate(0, 0) scale(7, 1);
@@ -366,7 +374,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(0, 0) scale(7, 1);
 }
 
-.left-arrow .line:nth-child(3) {
+.arrow-back .line:nth-child(3) {
   -webkit-transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
   -moz-transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
   -ms-transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
@@ -374,7 +382,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(-200%, 150%) rotate(45deg) scale(5, 1);
 }
 
-.left-arrow.rotate .line:nth-child(1) {
+.arrow-back.rotate .line:nth-child(1) {
   -webkit-transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
   -moz-transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
   -ms-transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
@@ -382,10 +390,99 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transform: translate(200%, -150%) rotate(45deg) scale(5, 1);
 }
 
-.left-arrow.rotate .line:nth-child(3) {
+.arrow-back.rotate .line:nth-child(3) {
   -webkit-transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
   -moz-transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
   -ms-transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
   -o-transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
   transform: translate(200%, 150%) rotate(-45deg) scale(5, 1);
 }
+
+.filter-list .line:nth-child(1) {
+  -webkit-transform: translate(0, -250%) scale(9, 1);
+  -moz-transform: translate(0, -250%) scale(9, 1);
+  -ms-transform: translate(0, -250%) scale(9, 1);
+  -o-transform: translate(0, -250%) scale(9, 1);
+  transform: translate(0, -250%) scale(9, 1);
+}
+
+.filter-list .line:nth-child(2) {
+  -webkit-transform: translate(0, 0) scale(6, 1);
+  -moz-transform: translate(0, 0) scale(6, 1);
+  -ms-transform: translate(0, 0) scale(6, 1);
+  -o-transform: translate(0, 0) scale(6, 1);
+  transform: translate(0, 0) scale(6, 1);
+}
+
+.filter-list .line:nth-child(3) {
+  -webkit-transform: translate(0, 250%) scale(2, 1);
+  -moz-transform: translate(0, 250%) scale(2, 1);
+  -ms-transform: translate(0, 250%) scale(2, 1);
+  -o-transform: translate(0, 250%) scale(2, 1);
+  transform: translate(0, 250%) scale(2, 1);
+}
+
+.filter-list.rotate .line:nth-child(1) {
+  -webkit-transform: translate(0, -250%) scale(2, 1);
+  -moz-transform: translate(0, -250%) scale(2, 1);
+  -ms-transform: translate(0, -250%) scale(2, 1);
+  -o-transform: translate(0, -250%) scale(2, 1);
+  transform: translate(0, -250%) scale(2, 1);
+}
+
+.filter-list.rotate .line:nth-child(3) {
+  -webkit-transform: translate(0, 250%) scale(9, 1);
+  -moz-transform: translate(0, 250%) scale(9, 1);
+  -ms-transform: translate(0, 250%) scale(9, 1);
+  -o-transform: translate(0, 250%) scale(9, 1);
+  transform: translate(0, 250%) scale(9, 1);
+}
+
+.sort .line:nth-child(1) {
+  -webkit-transform: translate(0, -250%) scale(9, 1);
+  -moz-transform: translate(0, -250%) scale(9, 1);
+  -ms-transform: translate(0, -250%) scale(9, 1);
+  -o-transform: translate(0, -250%) scale(9, 1);
+  transform: translate(0, -250%) scale(9, 1);
+}
+
+.sort .line:nth-child(2) {
+  -webkit-transform: translate(-150%, 0) scale(6, 1);
+  -moz-transform: translate(-150%, 0) scale(6, 1);
+  -ms-transform: translate(-150%, 0) scale(6, 1);
+  -o-transform: translate(-150%, 0) scale(6, 1);
+  transform: translate(-150%, 0) scale(6, 1);
+}
+
+.sort .line:nth-child(3) {
+  -webkit-transform: translate(-300%, 250%) scale(3, 1);
+  -moz-transform: translate(-300%, 250%) scale(3, 1);
+  -ms-transform: translate(-300%, 250%) scale(3, 1);
+  -o-transform: translate(-300%, 250%) scale(3, 1);
+  transform: translate(-300%, 250%) scale(3, 1);
+}
+
+.sort.rotate .line:nth-child(1) {
+  -webkit-transform: translate(300%, -250%) scale(3, 1);
+  -moz-transform: translate(300%, -250%) scale(3, 1);
+  -ms-transform: translate(300%, -250%) scale(3, 1);
+  -o-transform: translate(300%, -250%) scale(3, 1);
+  transform: translate(300%, -250%) scale(3, 1);
+}
+
+.sort.rotate .line:nth-child(2) {
+  -webkit-transform: translate(150%, 0) scale(6, 1);
+  -moz-transform: translate(150%, 0) scale(6, 1);
+  -ms-transform: translate(150%, 0) scale(6, 1);
+  -o-transform: translate(150%, 0) scale(6, 1);
+  transform: translate(150%, 0) scale(6, 1);
+}
+
+.sort.rotate .line:nth-child(3) {
+  -webkit-transform: translate(0, 250%) scale(9, 1);
+  -moz-transform: translate(0, 250%) scale(9, 1);
+  -ms-transform: translate(0, 250%) scale(9, 1);
+  -o-transform: translate(0, 250%) scale(9, 1);
+  transform: translate(0, 250%) scale(9, 1);
+}
+
